@@ -43,44 +43,29 @@ body {
   background-position: center bottom;
 }
 
-/* ТЕНЬ */
-.cat-shadow {
-  position:absolute;
-  bottom:10px;
-  left:10%;
-  transform: translateX(-50%);
-
-  width:50px;
-  height:16px;
-
-  background: rgba(0,0,0,0.4);
-  border-radius:50%;
-  filter: blur(5px);
-
-  z-index:1;
-}
-
 /* КОТ */
- #cat {
-  width:75px;
-  position:absolute;
+#cat {
+  position: absolute;
 
-  bottom:14px;
-  left:10%;
-  transform: translateX(-50%);
+  /* положение */
+  left: 22%;
+  bottom: 6%;
 
-  z-index:2;
+  /* адаптивный размер */
+  width: clamp(60px, 18vw, 90px);
+
+  z-index: 2;
 
   transform-origin: bottom center;
   animation: chill 3s ease-in-out infinite;
 }
 
 @keyframes chill {
-  0% { transform: translateX(-50%) translateY(0) rotate(0deg); }
-  25% { transform: translateX(-50%) translateY(-3px) rotate(-1deg); }
-  50% { transform: translateX(-50%) translateY(0) rotate(1deg); }
-  75% { transform: translateX(-50%) translateY(-2px) rotate(-1deg); }
-  100% { transform: translateX(-50%) translateY(0) rotate(0deg); }
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-3px) rotate(-1deg); }
+  50%  { transform: translateY(0) rotate(1deg); }
+  75%  { transform: translateY(-2px) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
 
 .sad {
